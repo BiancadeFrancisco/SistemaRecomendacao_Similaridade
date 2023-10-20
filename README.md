@@ -32,6 +32,7 @@ Implementar uma recomendação item-item baseada na similaridade de conteúdo., 
 •	Json, para manipular dados com arquivos json.
 
 **Sequencia processos:**
+
 1° Pré processamento dataset: 
 - Processar features de interesse, para criarmos representação vetorial para cada jogo, realizar ajustes necessários, como: tratar os tipos de dados, transformar features categóricas em numéricas, etc.
 
@@ -41,7 +42,7 @@ Implementar uma recomendação item-item baseada na similaridade de conteúdo., 
 •	SimpleImputer: preenche valores nulos com a média da feature.
 •	Pipeline: agrega todas as transformações em um só objeto.
 
-  *Representação Vetorial Simples:*  
+**Representação Vetorial Simples:**  
 
 1° Calcular a matriz de similaridade:
 - Com a representação vetorial obtida para cada item, é possível calcular a matriz de similaridade, a partir de uma função que calcula a similaridade entre dois vetores (cosine_similarity)
@@ -52,7 +53,7 @@ Implementar uma recomendação item-item baseada na similaridade de conteúdo., 
 3° Avaliação:
 - Foi possível indicar recomendações através da representação vetorial simples. Porém os vetores usados para o cálculo de similaridade possuem alta dimensionalidade. Apesar disso, a maioria dos componentes desses vetores são nulos uma vez que utilizamos representações maximamente esparsas para as tags e specs.
 
-*Representação Vetorial com PCA:*  
+**Representação Vetorial com PCA:**  
 Obs: Já utilizado mesmo dataset com features normalizadas.
 
 1° Utilizar função PLOT_VECTOR_SPARSITY:
